@@ -13,7 +13,6 @@ int main()
     if(h>1 || m >15)
     {
         s= (h*3600)+(m*60)+s;
-
         printf("Quantidade de segundos: %f\n", s);
     }
 
@@ -21,7 +20,6 @@ int main()
     else
     {
         m=(h*60)+m;
-
         printf("Quantidade de minutos: %f\n", m);
     }
 
