@@ -20,7 +20,7 @@ int main()
     else
     {
         m=(h*60)+(s/60)+m;
-        printf("Quantidade de minutos: %f\n", m);
+        printf("Quantidade de minutos: %.5f\n", m);
     }
 
     return 0;
