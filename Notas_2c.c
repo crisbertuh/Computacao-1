@@ -1,12 +1,12 @@
 #include<stdio.h>
 
-int aprova(char a);
-float media=0, n1, n2, n3;
-int pres=0, erro=0;
+int aprova(char a, float media, int pres);
+
 
 void main()
 {
-    
+  float media=0, n1, n2, n3;
+  int pres=0, erro=0;
 
   //Leitura das notas.
   printf("Digite as 3 notas do aluno\n");
@@ -33,7 +33,7 @@ void main()
       }
       //Se a presença for insuficiente.
       if(pres<=50)
-        aprova(4);
+        aprova(4, media, pres);
   }
   
   //Se não houver nenhum erro, faça os cáculos e imprima os valores.
@@ -42,18 +42,18 @@ void main()
     media=(n1+n2+n3)/3.0;
     
     if((media>=8.0) && (pres>=75))
-      aprova(1);
+      aprova(1, media, pres);
     else if( (media<=7.50) && (media>=6.0) && (pres>=75))
-      aprova(2);
+      aprova(2), media, pres;
     else if( ((media<=6.0) && (media>=4.0) && (pres<=75)) || ((media>=6.0) && (pres<=75)) || ((media>=4.0) && (pres<=75)) )
-      aprova(3);
+      aprova(3, media, pres);
     else if((media<=4.0))
-      aprova(4);
+      aprova(4, media, pres);
   }
   
 }
 
-int aprova (char a)
+int aprova (char a, float media, int pres)
 {
     if(a==1)
         printf("Aprovado com Distinção! \nSua Média é: %f \nSua presença é: %d%%", media, pres);
