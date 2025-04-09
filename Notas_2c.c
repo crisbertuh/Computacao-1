@@ -26,14 +26,14 @@ void main()
       scanf("%d", &pres);
 
       //Se a presença for maior que 10.0.
-  if(pres>100)
-  {  
-    printf("ERRO!! Digite um numero menor que 100.0\n");
-    erro=1;
-  }
-  //Se a presença for insuficiente.
-  if(pres<=50)
-    aprova(4);
+      if(pres>100)
+      {  
+        printf("ERRO!! Digite um numero menor que 100.0\n");
+        erro=1;
+      }
+      //Se a presença for insuficiente.
+      if(pres<=50)
+        aprova(4);
   }
   
   //Se não houver nenhum erro, faça os cáculos e imprima os valores.
