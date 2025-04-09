@@ -3,7 +3,7 @@
 void main()
 {
     float media=0, n1, n2. n3;
-    float pres=0;
+    int pres=0;
     int erro=0;
 
   //Leitura das notas.
@@ -22,19 +22,19 @@ void main()
   scanf("%f", pres);
 
   //Se a presença for maior que 10.0.
-  if(pres>100.0)
+  if(pres>100)
   {  
     printf("ERRO!! Digite um numero menor que 100.0\n");
     erro=1;
   }
   //Se a presença for insuficiente.
-  if(pres<75.0)
+  if(pres<75)
   {
     printf("Aluno reprovado!"\n)
   }
 
   //Se não houver nenhum erro, faça os cáculos e imprima os valores.
-  if((erro==0) && (pres<=75.0)) 
+  if((erro==0) && (pres<=75)) 
   {
     media=(n1+n2+n3)/3.0;
     
