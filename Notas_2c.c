@@ -24,7 +24,7 @@ void main()
   //Se a presença for maior que 10.0.
   if(pres>100.0)
   {  
-    printf("ERRO!! Digite um npumero menor que 100.0\n");
+    printf("ERRO!! Digite um numero menor que 100.0\n");
     erro=1;
   }
   //Se a presença for insuficiente.
@@ -39,13 +39,13 @@ void main()
     media=(n1+n2+n3)/3.0;
     
     if(media>=8.0)
-      printf("Aprovado com Distinção");
+      printf("Aprovado com Distinção! \nSua Média é: %f \nSua presença é: %f ", media, pres);
     else if(media=<7.50 && media=>6.0)
-      printf("Aprovado Direto");
+      printf("Aprovado Direto" \nSua Média é: %f \nSua presença é: %f ", media, pres");
     else if(media=<6.0 && media=>4.0)
-      printf("Vai para Final");
+      printf("Vai para Final" \nSua Média é: %f \nSua presença é: %f ", media, pres");
     else if(media=<4.0)
-      printf("Reprovado Direto");
+      printf("Reprovado Direto" \nSua Média é: %f \nSua presença é: %f ", media, pres");
   }
   
 }
