@@ -44,7 +44,7 @@ void main()
     if((media>=8.0) && (pres>=75))
       aprova(1, media, pres);
     else if( (media<=7.50) && (media>=6.0) && (pres>=75))
-      aprova(2), media, pres;
+      aprova(2, media, pres);
     else if( ((media<=6.0) && (media>=4.0) && (pres<=75)) || ((media>=6.0) && (pres<=75)) || ((media>=4.0) && (pres<=75)) )
       aprova(3, media, pres);
     else if((media<=4.0))
