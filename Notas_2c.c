@@ -27,7 +27,7 @@ void main()
     printf("ERRO!! Digite um npumero menor que 100.0\n");
     erro=1;
   }
-  //Se a resença for insuficiente
+  //Se a presença for insuficiente.
   if(pres<75.0)
   {
     printf("Aluno reprovado!"\n)
