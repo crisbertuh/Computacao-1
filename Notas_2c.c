@@ -1,9 +1,12 @@
 #include<stdio.h>
 
+aprova(int a);
+float media=0, n1, n2, n3;
+int pres=0, erro=0;
+
 void main()
 {
-    float media=0, n1, n2, n3;
-    int pres=0, erro=0;
+    
 
   //Leitura das notas.
   printf("Digite as 3 notas do aluno\n");
@@ -31,7 +34,7 @@ void main()
   //Se a presença for insuficiente.
   if(pres<=50)
   {
-    printf("Aluno reprovado direto!\n");
+    aprova(4);
     erro=1;
   }
   }
@@ -42,14 +45,28 @@ void main()
     media=(n1+n2+n3)/3.0;
     
     if((media>=8.0) && (pres>=75))
-      printf("Aprovado com Distinção! \nSua Média é: %f \nSua presença é: %d ", media, pres);
+      aprova(1);
     else if( (media<=7.50) && (media>=6.0) && (pres>=75))
-      printf("Aprovado Direto \nSua Média é: %f \nSua presença é: %d ", media, pres);
+      aprova(2);
     else if( ((media<=6.0) && (media>=4.0) && (pres<=75)) || ((media>=6.0) && (pres<=75)) || ((media>=4.0) && (pres<=75)) )
-      printf("Vai para Final \nSua Média é: %f \nSua presença é: %d ", media, pres);
+      aprova(3);
     else if((media<=4.0))
-      printf("Reprovado Direto \nSua Média é: %f \nSua presença é: %d ", media, pres);
+      aprova(4);
   }
   
 }
 
+aprova (int a)
+{
+    if(a==1)
+        printf("Aprovado com Distinção! \nSua Média é: %f \nSua presença é: %d ", media, pres);
+    if(a==2)
+        printf("Aprovado Direto \nSua Média é: %f \nSua presença é: %d ", media, pres);
+    if(a==3)
+        printf("Vai para Final \nSua Média é: %f \nSua presença é: %d ", media, pres);
+    if(a==4)
+        printf("Reprovado Direto \nSua Média é: %f \nSua presença é: %d ", media, pres);
+        
+    return 0;
+}
+    
