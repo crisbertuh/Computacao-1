@@ -15,10 +15,10 @@ void main()
   printf("Qual o rendimento em km/L de Álcool?");
   scanf("%f", &Ra);
   //----------------------------------------------
-  x=Ra/A;//$/L em alcool
-  y=Rg/G;//$/L em gasolina
+  x=A/Ra;//$/L em alcool
+  y=G/Rg;//$/L em gasolina
   if(x>y)
-    printf("Abastecer com Álcool é melhor\n Preço do rendimento(R$/L):%f", x);
+    printf("Abastecer com Álcool é melhor\n Preço do rendimento(R$/km):%f", x);
   else if(x<=y)
-    printf("Abastecer com Gasolina é melhor\n Preço do rendimento(R$/L):%f", y);
+    printf("Abastecer com Gasolina é melhor\n Preço do rendimento(R$/km):%f", y);
 }
