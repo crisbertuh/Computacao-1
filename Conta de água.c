@@ -12,9 +12,9 @@ void main()
   else if(C>=11 && C<=30)
     conta=7+(C-10);
   else if(C>=31 && C<=100)
-    conta=7+2*(C-30)+(C/10);
+    conta=27+2*(C-30);
   else if(C>=101)
-    conta=7+(C-10)+2*(C-30)+5*(C-100);
+    conta=167+5*(C-100);
 
   printf("A conta de água deu:%d", conta);
 }
