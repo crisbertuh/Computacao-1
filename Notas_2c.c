@@ -33,10 +33,7 @@ void main()
   }
   //Se a presença for insuficiente.
   if(pres<=50)
-  {
     aprova(4);
-    erro=1;
-  }
   }
   
   //Se não houver nenhum erro, faça os cáculos e imprima os valores.
@@ -59,13 +56,13 @@ void main()
 aprova (int a)
 {
     if(a==1)
-        printf("Aprovado com Distinção! \nSua Média é: %f \nSua presença é: %d ", media, pres);
+        printf("Aprovado com Distinção! \nSua Média é: %f \nSua presença é: %d%%", media, pres);
     if(a==2)
-        printf("Aprovado Direto \nSua Média é: %f \nSua presença é: %d ", media, pres);
+        printf("Aprovado Direto \nSua Média é: %f \nSua presença é: %d%%", media, pres);
     if(a==3)
-        printf("Vai para Final \nSua Média é: %f \nSua presença é: %d ", media, pres);
+        printf("Vai para Final \nSua Média é: %f \nSua presença é: %d%%", media, pres);
     if(a==4)
-        printf("Reprovado Direto \nSua Média é: %f \nSua presença é: %d ", media, pres);
+        printf("Reprovado Direto \nSua Média é: %f \nSua presença é: %d%%", media, pres);
         
     return 0;
 }
