@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-aprova(int a);
+int aprova(char a);
 float media=0, n1, n2, n3;
 int pres=0, erro=0;
 
@@ -53,7 +53,7 @@ void main()
   
 }
 
-aprova (int a)
+int aprova (char a)
 {
     if(a==1)
         printf("Aprovado com Distinção! \nSua Média é: %f \nSua presença é: %d%%", media, pres);
