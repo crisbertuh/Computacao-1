@@ -1,3 +1,4 @@
+//Cristiano Bertulino
 #include<stdio.h>
 
 int aprova(char a, float media, int pres);
