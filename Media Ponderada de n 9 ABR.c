@@ -17,5 +17,5 @@ void main()
     printf("Média (%d/%d) é %f \n", n, (i+1), x);
     
     i++;
-  }
+  }//FIM.
 }
