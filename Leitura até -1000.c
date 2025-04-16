@@ -3,11 +3,13 @@
 
 void main()
 {//Declaração das variaveis
-  int n, x=0, v=0;
-  float c;
+  int n, v=0;
+  float c, x=0;
   //----------LEITURA---------------------------------
   printf("Digite um número: ");
   scanf("%d", &n);
+  /*if(n>0)
+    v=1;*/
   //---------LAÇO DE REPETIÇÃO------------------------
   while(n>-1000)
     {
