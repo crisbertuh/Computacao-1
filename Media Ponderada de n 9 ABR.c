@@ -11,10 +11,10 @@ void main()
 
   while(i<=n)
   {
-    printf("Digite 3 números (%d/%d) \n", n, i);
+    printf("Digite 3 números (%d/%d) \n", n, (i+1));
     scanf("%f %f %f", &a, &b, &c);
     x=(2*a+3*b+5*c)/3;
-    printf("Média (%d/%d) é %f", n, i, x);
+    printf("Média (%d/%d) é %f \n", n, (i+1), x);
     
     i++;
   }
