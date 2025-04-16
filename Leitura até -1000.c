@@ -6,7 +6,7 @@ void main()
   int n, x=0, v=0;
   float c;
   //----------LEITURA---------------------------------
-  printf("Digite um número");
+  printf("Digite um número: ");
   scanf("%d", &n);
   //---------LAÇO DE REPETIÇÃO------------------------
   while(n>-1000)
@@ -16,7 +16,7 @@ void main()
         x=n+x;//Faz a soma antes da média 
         v++;//Somando qtdd de positivos
       }
-      printf("Digite outro número maior que -1000");
+      printf("Digite outro número maior que -1000: ");
       scanf("%d", &n);
     }
   //---------FIM DO LAÇO------------------------------
