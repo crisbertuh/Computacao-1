@@ -5,23 +5,23 @@ void main()
 {//Declaração das variaveis
   int n, x=0, v=0;
   float c;
-  //----------LEITURA------------
+  //----------LEITURA---------------------------------
   printf("Digite um número\n");
   scanf("%d", &n);
-  //---------LAÇO DE REPETIÇÃO---
+  //---------LAÇO DE REPETIÇÃO------------------------
   while(n>-1000)
     {
       printf("Digite outro número maior que -1000\n");
       scanf("%d", &n);
-      if(n>0)
+      if(n>0)//Se n for positivo
       {
-        x=n+x;
-        v++;
+        x=n+x;//Faz a soma antes da média 
+        v++;//Somando qtdd de positivos
       }
     }
-  //---------FIM DO LAÇO-----
-  printf("%d valores positivos\n", v);
+  //---------FIM DO LAÇO------------------------------
+  printf("%d valores positivos\n", v);//Imprimindo valores positivos
   c=(x/v);//Conta da media
-  printf("A média dos inteiros é:%.1f", c);//imprimindo
+  printf("A média dos inteiros é:%.1f", c);//Imprimindo media
   
 }//FIM.
