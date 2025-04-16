@@ -9,7 +9,7 @@ void main()
   printf("Digíte quantas vezes vc quer fazer uma média");
   scanf("%d/n", &n);
 //------------------------REPETIÇÃO-----------------------
-  while(i<=n)
+  while(i<n)
   {
     printf("Digite 3 números (%d/%d) \n", n, (i+1));
     scanf("%f %f %f", &a, &b, &c);
