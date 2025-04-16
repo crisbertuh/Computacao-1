@@ -2,7 +2,7 @@
 #include<stdio.h>
 
 void main()
-{//Leitura das variáveis
+{//Declaraçao das variáveis
   int n=0, i=0;
   float x=0, a, b, c;
 //------------------------LEITURA-------------------------
