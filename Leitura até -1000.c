@@ -11,13 +11,13 @@ void main()
   //---------LAÇO DE REPETIÇÃO------------------------
   while(n>-1000)
     {
-      printf("Digite outro número maior que -1000\n");
-      scanf("%d", &n);
       if(n>0)//Se n for positivo
       {
         x=n+x;//Faz a soma antes da média 
         v++;//Somando qtdd de positivos
       }
+      printf("Digite outro número maior que -1000\n");
+      scanf("%d", &n);
     }
   //---------FIM DO LAÇO------------------------------
   printf("%d valores positivos\n", v);//Imprimindo valores positivos
