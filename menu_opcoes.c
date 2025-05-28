@@ -60,7 +60,7 @@ int main() {
             printf("\nMatriz 1 multiplicada por %d:\n", constante);
             imprimir_matriz(resultado);
         }
-
+//                              QUER FAZER DENOVO?
         printf("\nDeseja realizar outro comando? (1 para sim, 0 para não): ");
         scanf("%d", &desejo);
     }
