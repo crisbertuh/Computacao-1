@@ -1,23 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+//--------------------------------------------------------------------------------------------------
 #define LINHAS 10
 #define COLUNAS 10
-
+//---------------------------DECLARAÇÃO DAS FUNÇÕES AUXILIARES--------------------------------------
 void escolha_0(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS]);
 void escolha_2(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS], int resultado[LINHAS][COLUNAS]);
 void escolha_3(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS], int resultado[LINHAS][COLUNAS]);
 void escolha_4(int m1[LINHAS][COLUNAS], int resultado[LINHAS][COLUNAS], int constante);
 void imprimir_matriz(int m[LINHAS][COLUNAS]);
-
+//-----------------------------FUNÇÃO PRINCIPAL-----------------------------------------------------
 int main() {
     int matriz1[LINHAS][COLUNAS];
     int matriz2[LINHAS][COLUNAS];
     int resultado[LINHAS][COLUNAS];
     int seleciona, desejo = 1;
     int constante;
-
+//                                 OPÇÕES
     while (desejo == 1) {
         printf("\nEscolha uma das opções:\n");
         printf("0 - Preencher 2 matrizes 10x10 com valores aleatórios\n");
@@ -28,11 +28,11 @@ int main() {
         printf("Sua escolha: ");
         scanf("%d", &seleciona);
 
-        if (seleciona < 0 || seleciona > 4) {
+        if (seleciona < 0 || seleciona > 4) {//VERIFICANDO SE A SELEÇÃO É VÁLIDA
             printf("ERRO: SELEÇÃO INVÁLIDA.\n");
             return 1;
         }
-
+//                           CHAMANDO AS FUNÇÕES
         if (seleciona == 0) {
             escolha_0(matriz1, matriz2);
             printf("Matrizes preenchidas com valores aleatórios.\n");
@@ -67,7 +67,7 @@ int main() {
 
     return 0;
 }
-
+//----------------------------SORTEANDO AS MATRIZES----------------------------
 void escolha_0(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS]) {
     srand(time(NULL));
     for (int i = 0; i < LINHAS; i++) {
@@ -77,7 +77,7 @@ void escolha_0(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS]) {
         }
     }
 }
-
+//---------------------------------SOMANDO AS MATRIZES------------------------------------------
 void escolha_2(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS], int resultado[LINHAS][COLUNAS]) {
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
@@ -85,7 +85,7 @@ void escolha_2(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS], int resultado[L
         }
     }
 }
-
+//----------------------------------SUBTRAINDO AS MATRIZES---------------------------------------
 void escolha_3(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS], int resultado[LINHAS][COLUNAS]) {
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
@@ -93,7 +93,7 @@ void escolha_3(int m1[LINHAS][COLUNAS], int m2[LINHAS][COLUNAS], int resultado[L
         }
     }
 }
-
+//---------------------------------MULTIPLICANDP POR UMA CONSTANTE-------------------------------
 void escolha_4(int m1[LINHAS][COLUNAS], int resultado[LINHAS][COLUNAS], int constante) {
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
@@ -101,8 +101,8 @@ void escolha_4(int m1[LINHAS][COLUNAS], int resultado[LINHAS][COLUNAS], int cons
         }
     }
 }
-
-void imprimir_matriz(int m[LINHAS][COLUNAS]) {
+//------------------------FUNÇÃO SÓ PARA IMPRESSÃO-------------------------------------------------
+void imprimir_matriz(int m[LINHAS][COLUNAS]) {//FUNÇÃO PARA IMPRIMIR A MATRIZ
     for (int i = 0; i < LINHAS; i++) {
         for (int j = 0; j < COLUNAS; j++) {
             printf("%4d", m[i][j]);
