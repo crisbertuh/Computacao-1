@@ -1,41 +1,41 @@
 //Cristiano Bertulino
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
+
+#define N 200
 
 int main() {
-    char frase[200];
-    int contagem[5] = {0, 0, 0, 0, 0}; // posições para a, e, i, o, u
-    int i;
+    char frase[N];
+    int contagem[5] = {0, 0, 0, 0, 0};
+    char vogais[5] = {'a', 'e', 'i', 'o', 'u'};
+    int i = 0;
+    char let;
 
-    printf("Digite uma frase: ");
-    fgets(frase, sizeof(frase), stdin);
+    printf("Escreva uma frase para ser analisada as vogais.\n");
+    fgets(frase, N, stdin);
 
     for(i = 0; frase[i] != '\0'; i++) {
-        char c = tolower(frase[i]);
-        
-        if (c == 'a') {
+        let = frase[i];
+
+        if(let == 'a' || let == 'A')
             contagem[0]++;
-        } 
-        else if (c == 'e') {
+        if(let == 'e' || let == 'E')
             contagem[1]++;
-        } 
-        else if (c == 'i') {
+        if(let == 'i' || let == 'I')
             contagem[2]++;
-        } 
-        else if (c == 'o') {
+        if(let == 'o' || let == 'O')
             contagem[3]++;
-        } 
-        else if (c == 'u') {
+        if(let == 'u' || let == 'U')
             contagem[4]++;
-        }
     }
 
-    printf("Contagem de vogais:\n");
-    printf("a: %d\n", contagem[0]);
-    printf("e: %d\n", contagem[1]);
-    printf("i: %d\n", contagem[2]);
-    printf("o: %d\n", contagem[3]);
-    printf("u: %d\n", contagem[4]);
+    for(i=0; i<5; i++){
+        printf("%c", vogais[i]);
+        for(int j=0; j<contagem[i]; j++){
+            printf("*");
+        }
+        printf("(%d)\n", contagem[i]);
+    }
 
     return 0;
 }
